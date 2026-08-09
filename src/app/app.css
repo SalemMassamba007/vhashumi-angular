@@ -114,6 +114,7 @@ nav li:nth-child(1) {
   text-align: center;
   border-radius: 10px;
   color: #f0ede5;
+  cursor: pointer;
 }
 
 .hero-to-services {
@@ -216,7 +217,7 @@ nav li:nth-child(1) {
   width: 100%;
   font-family: "Inter";
   text-align: center;
-  margin: 5px 0 10px;
+  margin: 0px 0 10px;
   color: #f0ede5;
 }
 
@@ -238,10 +239,11 @@ nav li:nth-child(1) {
   background-color: #fff;
 }
 .navSwiper{
+  width: 98.9vw;
     height: 88vh;
     background-image: linear-gradient(#fff, #F0C808, #961B2B);
     padding-top: 12vh;
-    box-shadow: 0 0 25px #100c08;
+    box-shadow: 0 0 25px #fff;
     position: relative;
     z-index: 1;
 }

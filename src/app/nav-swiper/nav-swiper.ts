@@ -4,29 +4,25 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import { OurServices } from './our-services/our-services';
+import { PageService } from '../app/services/page-service';
 
 @Component({
   selector: 'app-nav-swiper',
   templateUrl: './nav-swiper.html',
   styleUrls: ['./nav-swiper.css'],
-  imports: [OurServices],
+  imports: [],
 })
 export class NavSwiper implements AfterViewInit {
-  pages: any = {
-    show1: false,
-    show2: false,
-    show3: false,
-    show4: false,
-    show5: false,
-  };
+  constructor(private pageService: PageService) {}
 
   showPage(index: number) {
-    this.pages[index] = true;
+    this.pageService.display = false;
+    this.pageService.showPages[index] = true;
   }
 
   hidePage(index: number) {
-    this.pages[index] = false;
+    this.pageService.display = true;
+    this.pageService.showPages[index] = false;
   }
 
   ngAfterViewInit(): void {

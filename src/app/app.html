@@ -13,7 +13,7 @@
     <li>Contact</li>
   </ul>
 </nav>
-@if (display) {
+@if (pageService.display) {
 <div class="landing">
   <div class="top-row">
         <div class="text">
@@ -101,4 +101,14 @@
   <h1>Learn More About Us!</h1>
   <app-nav-swiper></app-nav-swiper>
 </div>
+}@if(pageService.displayServices){
+  <app-services></app-services>
+}@if(pageService.displayPricing){
+  <app-pricing></app-pricing>
+}@if(pageService.displayOurWork){
+  <app-our-work></app-our-work>
+}@if(pageService.displayTestimonials){
+  <app-testimony></app-testimony>
+}@if(pageService.displayContact){
+  <app-contact></app-contact>
 }

@@ -1,5 +1,5 @@
 .swiper {
-  width: 61.7%;
+  width: 62%;
   padding-top: 50px;
   padding-bottom: 50px;
   margin: auto;
@@ -16,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0 0 10px #E5B30D);
+  filter: drop-shadow(0 0 10px #302f2c);
   transition: all 0.5s ease-in-out;
   position: relative;
   z-index: 1;
@@ -40,6 +40,7 @@
   width: 40%;
   margin: 10% auto;
   font-size: 30px;
+  font-family: "inter";
   text-transform: uppercase;
   border-radius: 10px;
   border: 2px solid #ad4723;
@@ -49,8 +50,9 @@
 
 .swiper-slide button:hover{
   font-size: 35px;
+  cursor: pointer;
   width: 45%;
-  margin: 9.4% auto;
-  border: 2px solid #961B2B;
+  margin: 9.5% auto;
+  /* border: 2px solid #961B2B; */
   filter: drop-shadow(0 0 5px #961B2B);
 }
