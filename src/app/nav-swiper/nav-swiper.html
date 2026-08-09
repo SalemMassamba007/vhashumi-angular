@@ -1,0 +1,30 @@
+
+<div class="content">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <h1>Client Testimonies</h1>
+          <button (click)="showPage(0)">Show now!</button>
+        </div>
+        <div class="swiper-slide">
+          <h1>See the work we've done</h1>
+          <button (click)="showPage(1)">Show now!</button>
+        </div>
+        <div class="swiper-slide">
+          <h1>The Services we offer</h1>
+          <button (click)="showPage(2)">Show now!</button>
+          @if (pages[2]) {
+            <app-our-services></app-our-services>
+          }
+        </div>
+        <div class="swiper-slide">
+          <h1>Lowest Prices on the market</h1>
+          <button (click)="showPage(3)">Show now!</button>
+        </div>
+        <div class="swiper-slide">
+          <h1>Get in contact with us Today!</h1>
+          <button (click)="showPage(4)">Show now!</button>
+        </div>
+      </div>
+    </div>
+</div>

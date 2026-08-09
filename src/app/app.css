@@ -1,0 +1,260 @@
+nav {
+  position: fixed;
+  z-index: 100;
+  opacity: 0.8;
+  width: 65vw;
+  height: fit-content;
+  padding: 2vh 2.5vw;
+  top: 2vh;
+  left: 15%;
+  background-image: linear-gradient(135deg, #961b2b, #f0c808);
+  border-radius: 10px;
+  animation: switchColors 3.5s ease-in-out infinite forwards;
+}
+
+@keyframes switchColors {
+  0% {
+    filter: drop-shadow(0 0 5px #961b2b);
+  }
+  25% {
+    filter: drop-shadow(0 0 1px #961b2b);
+  }
+  50% {
+    filter: drop-shadow(0 0 5px #f0c808);
+  }
+  75% {
+    filter: drop-shadow(0 0 1px #f0c808);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #961b2b);
+  }
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav li {
+  font-family: 'Inter';
+  color: #f0ede5;
+}
+
+nav li:nth-child(1) {
+  font-size: 25px;
+  font-family: 'Stack Sans Notch';
+  font-weight: 600;
+  width: 35%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  padding: 5px;
+  background: linear-gradient(90deg, #f0c808, #c97d18);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing {
+  padding: 0 1vw;
+  min-height: 100vh;
+  max-width: 98.9vw;
+  background-image: linear-gradient(135deg, #961b2b, #f0c808);
+  position: sticky;
+  top: 0;
+  z-index: 0;
+}
+.text {
+  margin-top: 14vh;
+  width: 45%;
+}
+
+.text h1 {
+  margin: 0 0 30px 0;
+  font-size: 4em;
+  color: #f0ede5;
+  line-height: 60px;
+  font-family: 'Stack Sans Notch';
+}
+
+.black {
+  color: #DA9D11;
+}
+
+.text p {
+  color: #f0ede5;
+  font-size: 1.3em;
+  line-height: 35px;
+  font-weight: 400;
+  margin: 0 0 25px 0;
+  font-family: 'Inter';
+}
+
+.hero-buttons {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: 'Inter';
+}
+
+.hero-to-services,
+.transparent-whatsapp {
+  width: 40%;
+  padding: 15px 15px;
+  text-align: center;
+  border-radius: 10px;
+  color: #f0ede5;
+}
+
+.hero-to-services {
+  background-color: #A23127;
+  border: 3px solid #A23127;
+  transition: all 0.3s ease-out;
+}
+
+.hero-to-services:hover {
+  transform: translateY(-10px);
+}
+
+.transparent-whatsapp {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-out;
+}
+
+.transparent-whatsapp:hover {
+  transform: translateY(-10px);
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-row section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  text-align: center;
+  background-color: #f0ede5;
+  padding: 3px 25px 25px;
+  border-radius: 15px;
+  min-width: 80%;
+  transition: all 0.3s ease-out;
+  font-family: 'Inter';
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  z-index: 0;
+}
+
+.rule {
+  height: 4px;
+  width: 0;
+  margin: 0 auto 18px;
+  background: linear-gradient(135deg, #e03c31, #ffb81c);
+  transition: all 0.2s ease-out;
+  border-radius: 5px;
+}
+
+.card:hover .rule {
+  width: 100%;
+  cursor: default;
+}
+
+.card i {
+  background: linear-gradient(135deg, #e03c31, #ffb81c);
+  color: #f0ede5;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.card h2 {
+  font-size: 20px;
+  letter-spacing: 0.05em;
+}
+
+.greyed-out {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.05em;
+}
+
+.card table {
+  width: 100%;
+  text-align: center;
+}
+
+.card th {
+  width: 33%;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 1.2em;
+}
+
+.card td {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.bottom-row table {
+  width: 100%;
+  font-family: "Inter";
+  text-align: center;
+  margin: 5px 0 10px;
+  color: #f0ede5;
+}
+
+.bottom-row th {
+  font-size: 2.3em;
+  font-weight: 700;
+}
+
+.bottom-row td {
+  font-weight: 400;
+  font-size: 1.3em;
+}
+
+.centre {
+  height: 1000px;
+  width: 100%;
+  background-color: black;
+  margin: auto;
+  background-color: #fff;
+}
+.navSwiper{
+    height: 88vh;
+    background-image: linear-gradient(#fff, #F0C808, #961B2B);
+    padding-top: 12vh;
+    box-shadow: 0 0 25px #100c08;
+    position: relative;
+    z-index: 1;
+}
+
+.navSwiper h1{
+    font-family: "Stack Sans Notch";
+    background: linear-gradient(90deg, #961B2B, #c97d18);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 3em;
+}
+
