@@ -6,15 +6,16 @@
         <span>Vhashumi Holdings</span>
       </a>
     </li>
-    <li>Home</li>
-    <li>Services</li>
-    <li>Pricing</li>
-    <li>Portfolio</li>
-    <li>Contact</li>
+    <li class="links" (click)="pageService.hidePage(20)">Home</li>
+    <li class="links" (click)="pageService.showPage(2)">Services</li>
+    <li class="links" (click)="pageService.showPage(3)">Pricing</li>
+    <li class="links" (click)="pageService.showPage(1)">Portfolio</li>
+    <li class="links" (click)="pageService.showPage(0)">Testimonies</li>
+    <li class="links" (click)="pageService.showPage(4)">Contact</li>
   </ul>
 </nav>
-@if (pageService.display) {
-<div class="landing">
+@if (pageService.homeDisplay) {
+<div class="landing" id="landing">
   <div class="top-row">
         <div class="text">
           <h1>
@@ -101,14 +102,29 @@
   <h1>Learn More About Us!</h1>
   <app-nav-swiper></app-nav-swiper>
 </div>
-}@if(pageService.displayServices){
-  <app-services></app-services>
-}@if(pageService.displayPricing){
-  <app-pricing></app-pricing>
-}@if(pageService.displayOurWork){
-  <app-our-work></app-our-work>
-}@if(pageService.displayTestimonials){
-  <app-testimony></app-testimony>
-}@if(pageService.displayContact){
-  <app-contact></app-contact>
+<footer>
+  <div class="footNote">
+    © 2026 Vhashumi Holdings - Professional Printing Services
+  </div>
+</footer>
+}@if(pageService.pages[2]){
+  <div class="newPage">
+    <app-vhashumi-work></app-vhashumi-work>
+  </div>
+}@if(pageService.pages[3]){
+  <div class="newPage">
+    <app-pricing></app-pricing>
+  </div>
+}@if(pageService.pages[1]){
+  <div class="newPage">
+    <app-our-work></app-our-work>
+  </div>
+}@if(pageService.pages[0]){
+  <div class="newPage">
+    <app-testimony></app-testimony>
+  </div>
+}@if(pageService.pages[4]){
+  <div class="newPage">
+    <app-contact></app-contact>
+  </div>
 }

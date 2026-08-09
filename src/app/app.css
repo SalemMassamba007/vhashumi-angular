@@ -42,7 +42,8 @@ nav ul {
 
 nav li {
   font-family: 'Inter';
-  color: #f0ede5;
+  color: #f0ede5b3;
+  cursor: pointer;
 }
 
 nav li:nth-child(1) {
@@ -60,7 +61,19 @@ nav li:nth-child(1) {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  cursor: default;
   -webkit-text-fill-color: transparent;
+}
+
+.links{
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.links:hover{
+  color: #f0ede5;
+  background-color: #f0ede571;
+  box-shadow: 0 0 5px #f0ede5;
 }
 
 .landing {
@@ -240,7 +253,7 @@ nav li:nth-child(1) {
 }
 .navSwiper{
   width: 98.9vw;
-    height: 88vh;
+    height: 80vh;
     background-image: linear-gradient(#fff, #F0C808, #961B2B);
     padding-top: 12vh;
     box-shadow: 0 0 25px #fff;
@@ -260,3 +273,30 @@ nav li:nth-child(1) {
   font-size: 3em;
 }
 
+footer{
+  background-image: linear-gradient(180deg, #961B2B  ,#0F0506 10%);
+  z-index: 1;
+  position: sticky;
+  bottom: -10vh;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.footNote{
+  padding: 10px 0;
+  color: #f0ede5a0;
+  text-align: center;
+  font-family: "inter";
+  font-size: 20px;
+  height: fit-content;
+}
+
+.newPage{
+  width: 98.9vw;
+  padding-top: 13vh;
+  height: 100%;
+}

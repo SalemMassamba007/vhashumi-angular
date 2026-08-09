@@ -4,7 +4,8 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import { PageService } from '../app/services/page-service';
+import { PageService } from '../services/page-services.service';
+
 
 @Component({
   selector: 'app-nav-swiper',
@@ -13,16 +14,13 @@ import { PageService } from '../app/services/page-service';
   imports: [],
 })
 export class NavSwiper implements AfterViewInit {
-  constructor(private pageService: PageService) {}
+  constructor(public pageService: PageService) {}
 
-  showPage(index: number) {
-    this.pageService.display = false;
-    this.pageService.showPages[index] = true;
-  }
+  
 
   hidePage(index: number) {
-    this.pageService.display = true;
-    this.pageService.showPages[index] = false;
+    this.pageService.homeDisplay = true;
+    this.pageService.pages[index] = false;
   }
 
   ngAfterViewInit(): void {
