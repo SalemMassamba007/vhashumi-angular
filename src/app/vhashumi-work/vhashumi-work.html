@@ -1,12 +1,42 @@
 <div class="content container">
+    <div class="exit" (click)="pageService.hidePage(20)"><i class="fa-solid fa-x"></i></div>
     <h1>Our Services</h1>
     <h2>Complete Business Solutions</h2>
     <h3>Professional services for all your printing, copying, and business needs</h3>
     <hr>
     <div class="grid">
-        <div class="item">Printing & Copying</div>
-        <div class="item">Professional & Creative</div>
-        <div class="item">Document Processing</div>
-        <div class="item">Tech & Connectivity</div>
+        <div class="item" (click)="vhashumiService.showPage(0)">Printing & Copying</div>
+        <div class="item" (click)="vhashumiService.showPage(1)">Professional & Creative</div>
+        <div class="item" (click)="vhashumiService.showPage(2)">Document Processing</div>
+        <div class="item" (click)="vhashumiService.showPage(3)">Tech & Connectivity</div>
     </div>
 </div>
+@if (vhashumiService.pages[0]) {
+    <div class="inf-container">
+        <div class="close-container" (click)="vhashumiService.hidePage(0)">
+            <i class="fa-solid fa-x"></i>
+        </div>
+        <app-printing-and-copying></app-printing-and-copying>
+    </div>
+}@if (vhashumiService.pages[1]) {
+    <div class="inf-container">
+        <div class="close-container" (click)="vhashumiService.hidePage(1)">
+            <i class="fa-solid fa-x"></i>
+        </div>
+        <app-professional-and-creative></app-professional-and-creative>
+    </div>
+}@if (vhashumiService.pages[2]) {
+    <div class="inf-container">
+        <div class="close-container" (click)="vhashumiService.hidePage(2)">
+            <i class="fa-solid fa-x"></i>
+        </div>
+        <app-document-processing></app-document-processing>
+    </div>
+}@if (vhashumiService.pages[3]) {
+    <div class="inf-container">
+        <div class="close-container" (click)="vhashumiService.hidePage(3)">
+            <i class="fa-solid fa-x"></i>
+        </div>
+        <app-tech-and-connectivity></app-tech-and-connectivity>
+    </div>
+}

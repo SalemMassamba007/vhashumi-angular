@@ -74,15 +74,22 @@ hr{
     border: 2px solid #961B2B;
     filter: drop-shadow(0 0 5px #961B2B);
     transition: all 0.5s ease-in-out;
+    background: linear-gradient(135deg, #212529, #26262a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: default;
+  -webkit-text-fill-color: transparent;
 }
 
 .item:hover{
     transform: translateY(-10px) translateX(-3px);
     border-color: #F0C808;
-    filter: drop-shadow(0 0 5px #F0C808);
+    filter: drop-shadow(0 0 2px #CF8816);
     cursor: pointer;
     background-image: linear-gradient(45deg, #961B2B, #F0C808);
-    animation: Pulse 1.6s ease-in-out infinite forwards;
+    animation: Pulse 2s ease-in-out infinite forwards;
+    color: black;
 }
 
 .item:nth-child(2n):hover{
@@ -92,13 +99,94 @@ hr{
 
 @keyframes Pulse {
     0%{
+        filter: drop-shadow(0 0 2px #F0C808);
+    }20%{
         filter: drop-shadow(0 0 5px #F0C808);
-    }25%{
-        filter: drop-shadow(0 0 10px #F0C808);
-    }50%{
-        filter: drop-shadow(0 0 1px #F0C808);
+    }40%{
+        filter: drop-shadow(0 0 2px #F0C808);
+    }80%{
+        filter: drop-shadow(0 0 5px #F0C808);
     }100%{
-        filter: drop-shadow(0 0 5px #F0C808);
+        filter: drop-shadow(0 0 2px #F0C808);
     }
     
+}
+
+.exit{
+    position: absolute;
+    top: -10vh;
+    right: 0;
+    width: 7vh;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C3721A;
+    border-radius: 1000px;
+    font-size: 25px;
+    text-align: center;
+    color: #000;
+    transition: all 0.4s ease-in-out;
+    filter: drop-shadow(0 3px 3px #000);
+    cursor: pointer;
+
+}
+
+.exit:hover{
+    color: #f0ede5;
+    background-color: #961B2B;
+    transform: translateY(-5px);
+    filter: drop-shadow(0 5px 5px #000);
+}
+
+.inf-container{
+    position: absolute;
+    background-color: #f0ede5;
+    width: 0;
+    height: 0;
+    top: 80vh;
+    left: 50vw;
+    border-radius: 100000000000px;
+    filter: drop-shadow( 0 0 10px #F0C808);
+    animation: popUp 0.2s ease-out 1 forwards;
+    
+}
+
+@keyframes popUp {
+    0%{
+        width: 0;
+        height: 0;
+        display: none;
+        border-radius: 1000px;
+    }
+    100%{
+        height: 85vh;
+        width: 90vh;
+        border-radius: 10px;
+        display: block;
+        top: 10vh;
+        left: 28.5vw;
+        z-index: 10000;
+    }
+}
+
+.close-container{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 9px 0 10px;
+    background-color: #C3721A;
+    color: #f0ede5;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.close-container:hover{
+    background-color: #961B2B;
 }
